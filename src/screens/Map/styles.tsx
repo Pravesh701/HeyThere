@@ -15,7 +15,11 @@ const styles = StyleSheet.create({
     },
     map: {
         flex: 1
-    }
+    },
+    noPermissionsText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+      },
 })
 
 export default styles;

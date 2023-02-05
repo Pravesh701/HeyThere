@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, NativeStackNavigationOptions } from '@react-navigation/native-stack';
 
@@ -10,6 +11,11 @@ import color from '../utils/color';
 import routeName from './routeName';
 
 const Stack = createNativeStackNavigator();
+
+LogBox.ignoreLogs([
+    'Warning: isMounted(...) is deprecated',
+    'Module RCTImageLoader',
+]);
 
 const defaultScreenOptions: NativeStackNavigationOptions = {
     headerStyle: {
